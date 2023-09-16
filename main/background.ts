@@ -1,6 +1,6 @@
-import { app } from 'electron';
-import serve from 'electron-serve';
-import { createWindow } from './helpers';
+import { app } from 'electron'
+import serve from 'electron-serve'
+import { createWindow } from './helpers'
 
 const isProd: boolean = process.env.NODE_ENV === 'production';
 
@@ -18,9 +18,10 @@ if (isProd) {
     height: 600,
     resizable: false,
     autoHideMenuBar: true,
-    opacity: .97,
+    opacity: .98,
+    fullscreenable: false,
     webPreferences: {
-      nodeIntegration: true,
+			nodeIntegration: true
     }
   });
 

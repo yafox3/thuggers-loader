@@ -1,9 +1,15 @@
-import React from 'react'
+import { observer } from 'mobx-react-lite'
 import type { AppProps } from 'next/app'
-import '../styles/globals.css'
+import { useEffect } from 'react'
+import authStore from '../store/authStore'
+import '../styles/globals.scss'
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
-}
+const MyApp = observer(({ Component, pageProps }: AppProps) => {
+	useEffect(() => {
+		authStore.init()
+	}, [])
+
+	return <Component {...pageProps} />
+})
 
 export default MyApp
