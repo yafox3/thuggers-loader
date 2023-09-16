@@ -25,11 +25,11 @@ if (isProd) {
   });
 
   if (isProd) {
-    await mainWindow.loadURL('app://./home.html');
+    await mainWindow.loadURL('app://./login.html');
     mainWindow.removeMenu()
   } else {
     const port = process.argv[2];
-    await mainWindow.loadURL(`http://localhost:${port}/home`);
+    await mainWindow.loadURL(`http://localhost:${port}/login`);
     mainWindow.webContents.openDevTools();
   }
 })();
