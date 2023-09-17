@@ -1,9 +1,10 @@
 import Link from 'next/link'
+import Button from '../../components/ui/button'
 
 const Settings = () => {
   return (
 	<Link href={'/games'}>
-	  back
+	  <Button>Back</Button>
 	</Link>
   )
 }

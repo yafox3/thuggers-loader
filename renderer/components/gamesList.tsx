@@ -7,32 +7,32 @@ const GamesList = () => {
 		{
 			id: 1,
 			name: 'Deceit',
-			img: './images/games/deceit.png'
+			img: '/images/games/deceit.png'
 		},
 		{
 			id: 2,
 			name: 'Valorant',
-			img: './images/games/valorant.png'
+			img: '/images/games/valorant.png'
 		},
 		{
 			id: 3,
 			name: 'Fortnite',
-			img: './images/games/fortnite.png'
+			img: '/images/games/fortnite.png'
 		},
 		{
 			id: 4,
 			name: 'DayZ',
-			img: './images/games/dayz.png'
+			img: '/images/games/dayz.png'
 		},
 		{
 			id: 5,
 			name: 'CS:GO',
-			img: './images/games/csgo.png'
+			img: '/images/games/csgo.png'
 		},
 		{
 			id: 6,
 			name: 'Rust',
-			img: './images/games/rust.png'
+			img: '/images/games/rust.png'
 		}
 	])
 

@@ -36,7 +36,7 @@ const Login = observer(() => {
 				<title>Login</title>
 			</Head>
 			<div className='relative h-[100vh] flex justify-center items-center overflow-hidden'>
-				<div className='w-[350px] h-[346px] px-[35px] py-[60px] bg-dark rounded-3xl'>
+				<div className='w-[350px] h-[346px] px-[35px] py-[60px] bg-dark rounded-3xl shadow-lg'>
 					<h1 className='text-white text-[26px] text-center mb-[30px] font-bold'>Login</h1>
 					<form
 						className=''

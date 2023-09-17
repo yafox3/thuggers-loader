@@ -14,11 +14,11 @@ if (isProd) {
   await app.whenReady();
 
   const mainWindow = createWindow('main', {
-    width: 800,
-    height: 600,
+    width: 1024,
+    height: 800,
     resizable: false,
     autoHideMenuBar: true,
-    opacity: .98,
+    opacity: 1,
     fullscreenable: false,
     webPreferences: {
 			nodeIntegration: true
