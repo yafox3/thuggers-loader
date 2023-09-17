@@ -5,6 +5,7 @@ import { useState } from 'react'
 import Input from '../components/ui/input'
 import Loader from '../components/ui/loader'
 import authStore from '../store/authStore'
+import userStore from '../store/userStore'
 
 const Login = observer(() => {
 	const [authKey, setAuthKey] = useState('')
@@ -19,7 +20,8 @@ const Login = observer(() => {
 			try {
 				setLoading(true)
 				await authStore.login(authKey)
-        router.push('/games')
+        		router.push('/games')
+				userStore.auth(authKey)
 			} catch (error) {
 				setError(error.message)
 			} finally {

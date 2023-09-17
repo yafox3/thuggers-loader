@@ -14,4 +14,17 @@
     background: #111;
     color: #fefefe;
   }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #111; 
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #222; 
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #E4A400; 
+  }
 }

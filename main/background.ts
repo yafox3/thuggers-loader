@@ -18,7 +18,7 @@ if (isProd) {
     height: 800,
     resizable: false,
     autoHideMenuBar: true,
-    opacity: 1,
+    opacity: .99,
     fullscreenable: false,
     webPreferences: {
 			nodeIntegration: true
