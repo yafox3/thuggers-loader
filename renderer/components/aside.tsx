@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 const Aside = () => {
 	return (
-		<aside className='fixed z-10 top-0 left-0 h-[100vh] w-[60px] bg-dark rounded-r-2xl'>
+		<aside className='fixed z-20 top-0 left-0 h-[100vh] w-[60px] bg-dark rounded-r-2xl'>
 			<div className='relative h-full flex flex-col items-center justify-end'>
 				<nav className='relative pb-5'>
 					<Link href={'/settings'}>

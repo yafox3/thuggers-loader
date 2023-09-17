@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import Layout from '../../components/layout'
 import GamesList from '../../components/gamesList'
+import Layout from '../../components/layout'
 
 const Games = () => {
   return (

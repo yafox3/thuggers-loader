@@ -8,8 +8,8 @@ interface GameProps {
 
 const Game = ({ game }: GameProps) => {
 	return (
-		<div className='relative w-[270px] h-[270px] rounded-2xl transition-transform cursor-pointer group overflow-hidden'>
-			<Image
+		<div className='relative w-[270px] h-[270px] rounded-2xl transition-all cursor-pointer hover:drop-shadow-xl group overflow-hidden'>
+			<img
 				src={game.img}
 				width={270}
 				height={270}

@@ -6,7 +6,7 @@ const Layout = ({children}) => {
 		<>
 			<Aside />
 			<SectionHeader title='Games'/>
-			<div className='ml-[90px] mt-[30px]'>
+			<div className='ml-[90px] my-[110px]'>
 				{children}
 			</div>
 		</>
