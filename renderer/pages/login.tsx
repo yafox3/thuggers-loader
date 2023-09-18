@@ -5,25 +5,23 @@ import { useState } from 'react'
 import Input from '../components/ui/input'
 import Loader from '../components/ui/loader'
 import authStore from '../store/authStore'
-import userStore from '../store/userStore'
 
 const Login = observer(() => {
 	const [authKey, setAuthKey] = useState('')
 	const [loading, setLoading] = useState(false)
 	const [error, setError] = useState('')
- 	const router = useRouter()
+	const router = useRouter()
 
-	const handleLogin = async(event: React.FormEvent<HTMLFormElement>) => {
+	const handleLogin = async (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault()
 
 		if (authKey) {
 			try {
 				setLoading(true)
-				await authStore.login(authKey)
-        		router.push('/games')
-				userStore.auth(authKey)
-			} catch (error) {
-				setError(error.message)
+				await authStore.keyAuth.loginWithAuthKey(authKey)
+				router.push('/games')
+			} catch (e) {
+				setError(() => e.message)
 			} finally {
 				setLoading(false)
 			}
@@ -51,13 +49,21 @@ const Login = observer(() => {
 							type='password'
 							placeholder='Please enter your AuthKey'
 							required
-							style={{ marginBottom: '45px' }}
+							style={{ marginBottom: !error && '45px' }}
 						/>
+
+						{error && (
+							<p className='text-red text-sm text-center my-[20px]'>
+								<span className='font-bold'>Error:</span> {error}
+							</p>
+						)}
+
 						<div className='flex justify-center'>
 							<button className='focus:outline-none text-white bg-yellow hover:bg-lightyellow font-bold rounded-lg text-base px-10 py-2.5 mr-2 mb-2 transition-colors delay-75'>Login</button>
 						</div>
 					</form>
 				</div>
+
 				<span className='absolute z-10 top-[-80px] left-[-80px] w-[200px] h-[200px] rounded-full bg-yellow' />
 				<span className='absolute z-10 bottom-[-80px] right-[-80px] w-[200px] h-[200px] rounded-full bg-dark' />
 			</div>

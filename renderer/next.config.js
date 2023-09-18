@@ -3,7 +3,7 @@ module.exports = {
     if (!isServer) {
       config.target = 'electron-renderer'
     }
-    // images.unoptimized = true
+    
     return config
   },
   
