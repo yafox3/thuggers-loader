@@ -15,7 +15,7 @@ if (isProd) {
 
   const mainWindow = createWindow('main', {
     width: 1024,
-    height: 800,
+    height: 720,
     resizable: false,
     autoHideMenuBar: true,
     opacity: .99,
