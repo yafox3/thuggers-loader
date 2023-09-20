@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { execSync } from 'child_process'
 import os from 'os'
+import { getHWID } from '../utils/hwid'
 
 export class KeyAuth {
 	private _url: string = 'https://thuggers.fvds.ru/api/1.2/'
@@ -32,7 +33,7 @@ export class KeyAuth {
 		if (response.success) {
 			this._config.sessionid = response.sessionid
 			this._config.initialized = true
-			this._config.hwid = this.getHWID() || ''
+			this._config.hwid = getHWID() || ''
 		} else {
 			throw new Error(response.message)
 		}
@@ -69,14 +70,5 @@ export class KeyAuth {
 		const response = await axios.request(options)
 
 		return response.data
-	}
-
-	private getHWID() {
-		if (os.platform() != 'win32') return false
-
-		const cmd = execSync('wmic useraccount where name="%username%" get sid').toString('utf-8')
-
-		const system_id = cmd.split('\n')[1].trim()
-		return system_id
 	}
 }

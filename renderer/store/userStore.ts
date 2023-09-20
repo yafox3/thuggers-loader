@@ -3,7 +3,7 @@ import { makeAutoObservable } from 'mobx'
 class UserStore {
 	user = {
 		authKey: '',
-		isAuth: false
+		isAuth: false,
 	}
 
 	constructor() {

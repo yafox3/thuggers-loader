@@ -5,6 +5,7 @@ import { useState } from 'react'
 import Input from '../components/ui/input'
 import Loader from '../components/ui/loader'
 import authStore from '../store/authStore'
+import userStore from '../store/userStore'
 
 const Login = observer(() => {
 	const [authKey, setAuthKey] = useState('')
@@ -19,6 +20,7 @@ const Login = observer(() => {
 			try {
 				setLoading(true)
 				await authStore.keyAuth.loginWithAuthKey(authKey)
+				userStore.auth(authKey)
 				router.push('/games')
 			} catch (e) {
 				setError(() => e.message)
@@ -39,7 +41,6 @@ const Login = observer(() => {
 				<div className='w-[350px] h-[346px] px-[35px] py-[60px] bg-dark rounded-3xl shadow-lg'>
 					<h1 className='text-white text-[26px] text-center mb-[30px] font-bold'>Login</h1>
 					<form
-						className=''
 						action='submit'
 						onSubmit={handleLogin}>
 						<Input
