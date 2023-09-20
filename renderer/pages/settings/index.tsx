@@ -1,21 +1,21 @@
-import Link from 'next/link'
-import Button from '../../components/ui/button'
-import { useRouter } from 'next/router'
-import userStore from '../../store/userStore'
-import { observer } from 'mobx-react-lite'
+import Head from 'next/head'
+import Aside from '../../components/aside'
+import SectionHeader from '../../components/sectionHeader'
 
-const Settings = observer(() => {
-	const router = useRouter()
-
-	if (!userStore.user.isAuth) {
-		router.push('/login')
-	}
+const Settings = () => {
 
   return (
-	<Link href={'/games'}>
-	  <Button>Back</Button>
-	</Link>
-  )
-})
+	<>
+		<Head>
+			<title>Settings</title>	
+		</Head>	  
+		
+		<section className='relative'>
+			<Aside />
+			<SectionHeader title='Settings' className='' />
+		</section>
+	</>
+	)
+}
 
 export default Settings
