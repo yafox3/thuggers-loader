@@ -15,7 +15,7 @@ const Settings = () => {
 
 				<div className='flex flex-col gap-3 ml-[90px] mr-[30px]'>
 					{/* account */}
-					<div className='flex items-center justify-between w-full p-5 bg-dark hover:bg-opacity-60 transition-all hover:scale-[1.01] group rounded-2xl cursor-pointer'>
+					<div className='flex items-center justify-between w-full p-5 bg-dark hover:bg-opacity-60 transition-all active:scale-[0.97] group rounded-2xl cursor-pointer'>
 						<div className='flex items-center gap-2'>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
@@ -45,7 +45,7 @@ const Settings = () => {
 					</div>
 
 					{/* games */}
-					<div className='flex items-center justify-between w-full p-5 bg-dark hover:bg-opacity-60 transition-all hover:scale-[1.01] group rounded-2xl cursor-pointer'>
+					<div className='flex items-center justify-between w-full p-5 bg-dark hover:bg-opacity-60 transition-all active:scale-[0.97] group rounded-2xl cursor-pointer'>
 						<div className='flex items-center gap-2'>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
